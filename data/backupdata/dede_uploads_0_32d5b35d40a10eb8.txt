@@ -1,0 +1,10 @@
+INSERT INTO `dede_uploads` VALUES('1','0','160420/1-1604201P132434.jpg','/uploads/allimg/160420/1-1604201P132434.jpg','1','800','533','0','116099','1461146492','1');
+INSERT INTO `dede_uploads` VALUES('2','0','1-1604201P1480-L.jpg','/uploads/allimg/160420/1-1604201P1480-L.jpg','1','0','0','0','91899','1461146508','1');
+INSERT INTO `dede_uploads` VALUES('3','5','GT-B9338 ( UPPER DECO )','/uploads/allimg/160420/1-1604201PIO34.jpg','1','800','533','0','52702','1461146857','1');
+INSERT INTO `dede_uploads` VALUES('4','5','GT-B9338 ( UPPER DECO )','/uploads/allimg/160420/1-1604201PJ40-L.jpg','1','0','0','0','320053','1461146864','1');
+INSERT INTO `dede_uploads` VALUES('5','6','荣获三星电子协力社2015年第四季度“品质最优奖','/uploads/allimg/160420/1-1604201Z6360-L.jpg','1','0','0','0','17924','1461150396','1');
+INSERT INTO `dede_uploads` VALUES('6','7','[爱之分享]冬季送温暖活动','/uploads/allimg/160420/1-16042019332N10.jpg','1','1000','667','0','904448','1461152007','1');
+INSERT INTO `dede_uploads` VALUES('8','9','YODOC(SYD-A0710)','/uploads/allimg/160420/1-1604202049450-L.gif','1','0','0','0','20033','1461156585','1');
+INSERT INTO `dede_uploads` VALUES('9','9','YODOC(SYD-A0710)','/uploads/allimg/160420/2049593F9-0.gif','1','856','153','0','16755','1461156600','1');
+INSERT INTO `dede_uploads` VALUES('10','9','YODOC(SYD-A0710)','/uploads/allimg/160420/2049594427-1.gif','1','856','95','0','7440','1461156604','1');
+INSERT INTO `dede_uploads` VALUES('11','9','YODOC(SYD-A0710)','/uploads/soft/160420/1-160420205353.pdf','4','0','0','0','8831','1461156833','1');

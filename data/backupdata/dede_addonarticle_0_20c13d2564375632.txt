@@ -1,0 +1,5 @@
+INSERT INTO `dede_addonarticle` VALUES('1','19','1998.06','','','127.0.0.1');
+INSERT INTO `dede_addonarticle` VALUES('2','20','2000.03','','','127.0.0.1');
+INSERT INTO `dede_addonarticle` VALUES('3','20','2002.07','','','127.0.0.1');
+INSERT INTO `dede_addonarticle` VALUES('6','11','<span style=\"font-family: Consolas, \'Lucida Console\', monospace; white-space: pre-wrap;\">S-CONNECT 在三星电子协力社2015年第四季度颁奖仪式上荣获&ldquo;品质最优奖&rdquo;。 今后S-CONNECT将会不断提高服务和质量，创造更好的品质。 谢谢！</span>','','','127.0.0.1');
+INSERT INTO `dede_addonarticle` VALUES('7','12','','','','127.0.0.1');

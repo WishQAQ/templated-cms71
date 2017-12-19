@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--[if IE 6]><html lang="zh" class="old-ie ie6"><![endif]-->
+<!--[if IE 7]><html lang="zh" class="old-ie ie7"><![endif]-->
+<!--[if IE 8]><html lang="zh" class="old-ie ie8"><![endif]-->
+<!--[if IE 9]><html lang="zh" class="old-ie ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="zh" class="no-js">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>{dede:field.typename/}-{dede:global.cfg_webname/}</title> 
+  <link rel="shortcut icon" href="{dede:global.cfg_cmsurl/}/favicon.ico" /> 
+  <link href="{dede:global.cfg_skin/}/css/style.css" rel="stylesheet" /> 
+ </head> 
+ <body> 
+  <div class="container product-0101"> 
+   <!-- header --> 
+   {dede:include filename="head.htm"/}
+   <!-- banner --> 
+   <div class="banner banner-02"><div class="wrap clearfix"><h2>新的挑战！<strong>VISION 2016！</strong></h2></div></div>
+   <img class="sub-banner" src="{dede:global.cfg_skin/}/images/banner-02.jpg" alt="">
+   <!-- bread --> 
+   <script type="text/javascript" src="{dede:global.cfg_skin/}/js/breadcrumb.js"></script> 
+   <div id="breadcrumb"> 
+    <div class="wrap clearfix"> 
+     <ul class="bread clearfix">{dede:field name='position'/}</ul> 
+     <ul class="social">{dede:field.typename/}</ul> 
+    </div> 
+   </div> 
+   <!-- contents --> 
+   <div class="contents"> 
+    <div class="wrap clearfix"> 
+     <!-- content --> 
+     <div id="content"> 
+      <div class="content"> 
+       <div class="top-module"> 
+        <div class="hedding clearfix"> 
+         <h3 class="hedding-type-01">{dede:field.typename/}</h3> 
+        </div> 
+       </div> 
+       <div class="bot-module"> 
+        {dede:list pagesize='20'}
+        <div class="module module-[field:global.autoindex/] clearfix"> 
+         <div class="product-img-frame">
+          <a href="javascript:;">
+           <div class="pp-parent" data-src="[field:picname/]">
+            <img src="[field:picname/]" alt="[field:title/]" width="112" height="131" />
+            <span class="detail"><img src="[field:global.cfg_skin/]/images/ic-detail.gif" alt="放大" /></span>
+           </div></a>
+         </div> 
+         <div class="mobile-width"> 
+          <div class="table-responsive"> 
+           <table width="100%" cellpadding="0" class="table-type-010" summary="ASS'Y BUCKLE_LADY(SILVER)"> 
+            <tbody> 
+             <tr class="first"> 
+              <th width="15%" scope="row"><strong>型号(部件名称)</strong></th> 
+              <td><strong class="color01">[field:title/]</strong><a href="javascript:;" class="btn-001 btn btn-gray pp-parent" data-src="[field:wcpts/]">完成品图示</a></td> 
+             </tr> 
+             <tr class="last"> 
+              <th scope="row"><strong>特殊情况</strong></th> 
+              <td>[field:tsqk/]</td> 
+             </tr> 
+            </tbody> 
+           </table> 
+          </div> 
+         </div> 
+        </div> 
+        {/dede:list}
+        <div class="paging-box"> 
+         <ul> 
+          {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+         </ul> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- content --> 
+     {dede:include filename="index_left.htm"/} 
+    </div> 
+   </div> 
+   <!-- //contents --> 
+   {dede:include filename="footer.htm"/}  
+   <!-- popup --> 
+   <div id="pop_detail" class="popup-wrap"> 
+    <div class="popup-content"> 
+     <span class="button b-close"><img src="{dede:global.cfg_skin/}/images/close-02.gif" alt="close" /></span> 
+     <img class="imgsrc" width="800" /> 
+    </div> 
+   </div>
+   <!-- //popup --> 
+  </div> 
+  <!-- JavaScript --> 
+  <script src="{dede:global.cfg_skin/}/js/jquery-1.10.2.min.js"></script> 
+  <script src="{dede:global.cfg_skin/}/js/common.js"></script> 
+  <script src="{dede:global.cfg_skin/}/js/jquery.bpopup.min.js"></script> 
+  <script>
+	  $(document).ready(function() {
+		$('.pp-parent').on('click', function(event) {
+		  event.preventDefault();
+		  var imgsrc = $(this).data('src');
+		  $('#pop_detail').bPopup();
+		  $('.imgsrc').attr("src",imgsrc);
+		});
+	  });
+  </script>   
+ </body>
+</html>

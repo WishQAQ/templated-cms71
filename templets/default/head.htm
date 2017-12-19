@@ -1,0 +1,41 @@
+
+<div class="top-menu">
+  <div class="wrap clearfix">
+    <ul class="menu-ul">
+      <li class="list-2"><a href="javascript:;">KOREA</a></li>
+      <li class="list-2"><a href="javascript:;">ENGLISH</a></li>
+      <li class="list-4"><a href="javascript:;">客户咨询</a></li>
+      <li class="search-icon"><a href="javascript:;"><img src="{dede:global.cfg_skin/}/images/icon-search.png" alt="" /></a></li>
+    </ul>
+  </div>
+</div>
+<div class="gnb-wrap">
+  <div id="gnb" class="gnb">
+    <div class="wrap clearfix"> <a href="/"><img src="{dede:global.cfg_skin/}/images/logo.png" alt="" class="gnb-logo fl" /></a>
+      <div class="fr">
+        <div class="gnb-ul-wrap">
+          <ul class="clearfix gnb-ul-depth01">
+            {dede:channelartlist typeid='top' row='8' currentstyle='active'}
+            <li class="gnb-01 {dede:field.currentstyle/}"><a href="{dede:field.typeurl/}">{dede:field.typename/}</a>
+              <ul class="clearfix gnb-ul-depth02 activeDepth02">
+                {dede:channel type='son' noself='yes'}
+                <li><a href='[field:typelink/]' class='has-list'>[field:typename/]</a></li>
+                {/dede:channel}
+              </ul>
+            </li>
+            {/dede:channelartlist}
+          </ul>
+        </div>
+        <a href="javascript:;" id="gnb-btn"><img src="{dede:global.cfg_skin/}/images/gnb-btn.png" alt="" /></a>
+        <div id="search" style="display:none;">
+          <form action="{dede:global.cfg_phpurl/}/search.php" method="post">
+            <input type="hidden" name="kwtype" value="0" />
+            <label for="search1" class="visuallyhidden">输入您的搜索字词</label>
+            <input type="search" class="form-control search1" id="search1" name="q" placeholder="输入您的搜索字词" />
+            <button type="submit" class="btn btn-default">搜索</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

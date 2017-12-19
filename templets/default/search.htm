@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--[if IE 6]><html lang="zh" class="old-ie ie6"><![endif]-->
+<!--[if IE 7]><html lang="zh" class="old-ie ie7"><![endif]-->
+<!--[if IE 8]><html lang="zh" class="old-ie ie8"><![endif]-->
+<!--[if IE 9]><html lang="zh" class="old-ie ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="zh" class="no-js">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>搜索-{dede:global.cfg_webname/}</title> 
+  <link rel="shortcut icon" href="{dede:global.cfg_cmsurl/}/favicon.ico" /> 
+  <link href="{dede:global.cfg_skin/}/css/style.css" rel="stylesheet" /> 
+ </head> 
+ <body> 
+  <div class="container prcenter-0101"> 
+   <!-- header --> 
+   {dede:include filename="head.htm"/}
+   <!-- banner --> 
+   <div class="banner banner-05"><div class="wrap clearfix"><h2>新的挑战！<strong>VISION 2016！</strong></h2></div></div>
+   <!-- bread --> 
+   <div id="breadcrumb"> 
+    <div class="wrap clearfix"> 
+     <ul class="bread clearfix">搜索 <strong class="fc_03c">{dede:global name='keyword' function='RemoveXSS(@me)'/}</strong> 的结果</ul> 
+     <ul class="social">{dede:global name='keyword' function='RemoveXSS(@me)'/}</ul> 
+    </div> 
+   </div> 
+   <!-- contents --> 
+   <div class="contents"> 
+    <div class="wrap clearfix"> 
+     <!-- content --> 
+     <div id="content"> 
+      <div class="content"> 
+       <div class="module"> 
+        <div class="select-area select-area-01"> 
+         <form action="{dede:global.cfg_phpurl/}/search.php" method="post"> 
+         <input type="hidden" name="kwtype" value="0" />
+         <select name="searchtype" class="search-option" id="search-option">
+             <option value="title" selected='1'>检索标题</option>
+             <option value="titlekeyword">智能模糊</option>
+          </select>
+          <input type="text" name="q" id="input-search" title="请输入搜索关键词" placeholder="请输入搜索关键词" value="" /> 
+          <input type="submit" class="btn btn-gray" value="搜索" /> 
+         </form> 
+        </div> 
+        {dede:list pagesize='20'}
+        <!--list block--> 
+        <div class="column-wrap column-type01 pr-column"> 
+         <a href="[field:arcurl/]" class="block clearfix"> 
+          <div class="column col01"> 
+           <p class="img-wrap"><img src="[field:picname/]" alt="[field:title/]" width="250" /></p> 
+          </div> 
+          <div class="column col02"> 
+           <dl> 
+            <dt>[field:title/]</dt> 
+            <dd>[field:description function="cn_substr(@me,240)"/]...</dd> 
+            <dd class="bottom"> 
+             <span>发布时间 [field:pubdate function="MyDate('Y-m-d',@me)"/]</span> 
+             <span>浏览次数 [field:click/]</span> 
+            </dd> 
+           </dl> 
+          </div> </a> 
+        </div> 
+        <!--//list block--> 
+        {/dede:list}
+        <div class="paging-box"> 
+         <ul> 
+          {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+         </ul> 
+        </div> 
+        <!-- //페이징 --> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- content --> 
+     {dede:include filename="index_left.htm"/} 
+    </div> 
+   </div> 
+   <!-- //contents --> 
+   {dede:include filename="footer.htm"/}  
+  </div> 
+  <!-- JavaScript --> 
+  <script src="{dede:global.cfg_skin/}/js/jquery-1.10.2.min.js"></script> 
+  <script src="{dede:global.cfg_skin/}/js/common.js"></script>   
+ </body>
+</html>

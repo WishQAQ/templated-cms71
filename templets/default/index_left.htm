@@ -1,0 +1,27 @@
+<!-- sidebar -->
+
+<div id="sidebar">
+  <div class="sidebar"> 
+    <!-- esconec -->
+    <h2>&nbsp;</h2>
+    <ul class="lnb">
+      {dede:channelartlist typeid='top' row='8' currentstyle='on open'}
+      <li class="lnb-01"><a href="javascript:;" class="{dede:field.currentstyle/}">{dede:field.typename/}</a>
+        <ul>
+          {dede:channel type='son' noself='yes'}
+          <li><a href="[field:typelink/]">[field:typename/]</a></li>
+          {/dede:channel}
+        </ul>
+      </li>
+      {/dede:channelartlist}
+    </ul>
+    <div class="lnb-bottom">
+      <ul class="lnb-quick clearfix">
+        <li><a href="{dede:type typeid='6'}[field:typeurl/]{/dede:type}"><img src="{dede:global.cfg_skin/}/images/lb-01.gif" /></a></li>
+        <li><a><img src="{dede:global.cfg_skin/}/images/lb-02.gif" /></a></li>
+        <li><a><img src="{dede:global.cfg_skin/}/images/lb-03.gif" /></a></li>
+      </ul>
+      <a href="{dede:type typeid='4'}[field:typeurl/]{/dede:type}" class="btn-comeon"><img src="{dede:global.cfg_skin/}/images/lb-04.gif" /></a> </div>
+  </div>
+</div>
+<!-- //sidebar --> 

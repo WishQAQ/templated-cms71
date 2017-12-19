@@ -1,0 +1,7 @@
+INSERT INTO `dede_addon17` VALUES('14','21','','','127.0.0.1','/uploads/150726/1-150H6235914C3.jpg','#');
+INSERT INTO `dede_addon17` VALUES('15','21','','','127.0.0.1','/uploads/150726/1-150H623593HR.jpg','#');
+INSERT INTO `dede_addon17` VALUES('16','21','','','127.0.0.1','/uploads/150727/1-150HF00000313.jpg','#');
+INSERT INTO `dede_addon17` VALUES('17','22','','','127.0.0.1','/uploads/150727/1-150HF00041956.jpg','#');
+INSERT INTO `dede_addon17` VALUES('18','23','','','127.0.0.1','/uploads/150727/1-150HF0024X31.jpg','http://player.youku.com/player.php/sid/XNDUyMzAwNTY4/v.swf');
+INSERT INTO `dede_addon17` VALUES('20','24','','','127.0.0.1','/skin/images/logo.jpg','/');
+INSERT INTO `dede_addon17` VALUES('21','25','','','127.0.0.1','/uploads/150727/1-150HH2140K91.jpg','#');

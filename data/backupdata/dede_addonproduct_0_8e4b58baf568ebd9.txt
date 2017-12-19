@@ -1,0 +1,2 @@
+INSERT INTO `dede_addonproduct` VALUES('4','6','','','','127.0.0.1','{dede:img text=\'\' width=\'800\' height=\'533\'} /uploads/allimg/160420/1-1604201P132434.jpg {/dede:img}','Galaxy Gear 1');
+INSERT INTO `dede_addonproduct` VALUES('5','6','','','','127.0.0.1','{dede:img text=\'\' width=\'800\' height=\'533\'} /uploads/allimg/160420/1-1604201PIO34.jpg {/dede:img}','없음없음');

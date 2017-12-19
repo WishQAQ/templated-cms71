@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if IE 6]><html lang="zh" class="old-ie ie6"><![endif]-->
+<!--[if IE 7]><html lang="zh" class="old-ie ie7"><![endif]-->
+<!--[if IE 8]><html lang="zh" class="old-ie ie8"><![endif]-->
+<!--[if IE 9]><html lang="zh" class="old-ie ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="zh" class="no-js">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>{dede:field.title/}-{dede:global.cfg_webname/}</title> 
+  <link rel="shortcut icon" href="{dede:global.cfg_cmsurl/}/favicon.ico" /> 
+  <link href="{dede:global.cfg_skin/}/css/style.css" rel="stylesheet" /> 
+ </head> 
+ <body> 
+  <div class="container healthcare-020101"> 
+   <!-- header --> 
+   {dede:include filename="head.htm"/}
+   <!-- banner --> 
+   <div class="banner banner-07"><div class="wrap clearfix"><h2>新的挑战！<strong>VISION 2016！</strong></h2></div></div>
+   <!-- bread --> 
+   <div id="breadcrumb"> 
+    <div class="wrap clearfix"> 
+     <ul class="bread clearfix">{dede:field name='position'/}</ul> 
+     <ul class="social">{dede:field.typename/}</ul> 
+    </div> 
+   </div> 
+   <!-- //bread --> 
+   <!-- contents --> 
+   <div class="contents"> 
+    <div class="wrap clearfix"> 
+     <!-- content --> 
+     <div id="content"> 
+      <div class="content"> 
+       <div class="body"> 
+        <div class="tab-type01 tab-comeon"> 
+         <div class="sub-tab block-02"> 
+          <div class="sub-tab-header"> 
+           <ul class="clearfix"> 
+            <li class="sb-tab-01"><a href="javascript:;" class="active">产品信息</a></li> 
+            <li class="sb-tab-02"><a href="javascript:;">使用说明书</a></li> 
+           </ul> 
+          </div> 
+          <div class="sub-tab-contents sub-tab-contents-01 clearfix"> 
+           	<div class="block-module block-01"> 
+           <div class="clearfix"> 
+            <div class="left-col mobile-width"> 
+             <img src="{dede:field.picname/}" alt="{dede:field.title/}" /> 
+            </div> 
+            <div class="right-col mobile-width"> 
+             <h5>产品名: {dede:field.title/}</h5> 
+             <p>{dede:field.description/}</p> 
+            </div> 
+           </div> 
+          </div> 
+          {dede:field.body/}
+          </div> 
+          <div class="sub-tab-contents sub-tab-contents-02 hide"> 
+           <div class="block-module block-01">
+            <div class="left-col mobile-width">
+                <img src="{dede:field.picname/}" alt="">
+            </div>
+            <div class="right-col mobile-width">
+              <h4>点击附件</h4>
+              <p class="text-01">可以看到使用说明书</p>
+              <a href="{dede:field.shuomingshu/}" target="_blank" class="btn btn-orange">
+                <img src="{dede:global.cfg_skin/}/images/icon-file.gif" alt="">下载使用说明书 <span class="arrow-right">→</span>
+              </a>
+            </div>
+           </div>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- content --> 
+     {dede:include filename="index_left.htm"/} 
+    </div> 
+   </div> 
+   <!-- //contents -->
+   {dede:include filename="footer.htm"/} 
+  <!-- JavaScript --> 
+  <script src="{dede:global.cfg_skin/}/js/jquery-1.10.2.min.js"></script> 
+  <script src="{dede:global.cfg_skin/}/js/jquery.bpopup.min.js"></script> 
+  <script src="{dede:global.cfg_skin/}/js/common.js"></script>  
+ </body>
+</html>

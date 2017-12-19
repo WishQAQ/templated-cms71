@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if IE 6]><html lang="zh" class="old-ie ie6"><![endif]-->
+<!--[if IE 7]><html lang="zh" class="old-ie ie7"><![endif]-->
+<!--[if IE 8]><html lang="zh" class="old-ie ie8"><![endif]-->
+<!--[if IE 9]><html lang="zh" class="old-ie ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="zh" class="no-js">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>{dede:field.typename/}-{dede:global.cfg_webname/}</title> 
+  <link rel="shortcut icon" href="{dede:global.cfg_cmsurl/}/favicon.ico" /> 
+  <link href="{dede:global.cfg_skin/}/css/style.css" rel="stylesheet" /> 
+  <style>
+	html,body{-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;}
+  </style>
+ </head> 
+ <body> 
+  <div class="container sconnect-0101"> 
+   <!-- header --> 
+   {dede:include filename="head.htm"/}
+   <!-- banner --> 
+   <div class="banner banner-01"><div class="wrap clearfix"><h2>新的挑战！<strong>VISION 2016！</strong></h2></div></div>
+   <img class="sub-banner" src="{dede:global.cfg_skin/}/images/m-banner-01.jpg" alt="">
+   <!-- bread --> 
+   <script type="text/javascript" src="{dede:global.cfg_skin/}/js/breadcrumb.js"></script> 
+   <div id="breadcrumb"> 
+    <div class="wrap clearfix"> 
+     <ul class="bread clearfix">{dede:field name='position'/}</ul> 
+     <ul class="social">{dede:field.typename/}</ul> 
+    </div> 
+   </div> 
+   <!-- //bread --> 
+   <!-- contents --> 
+   <div class="contents"> 
+    <div class="wrap clearfix"> 
+     <!-- content --> 
+     <div id="content"> 
+      <div class="content"> 
+       <div class="top-module clearfix">
+            <h3 class="color01">来者路径</h3>
+       </div>
+       <div class="tab-type01 tab-history">
+            <div class="tab-bar-type01 clearfix">
+              <ul class="clearfix">
+                {dede:channel type='son' noself='yes' currentstyle="<li><button type='button' class='setting selected'><a href='~typelink~' ~rel~>~typename~</a></button></li>"}
+                <li><button type="button" class="setting"><a href="[field:typeurl/]">[field:typename/]</a></button></li>
+                {/dede:channel}
+              </ul>
+            </div>
+            <div class="tab-contents">
+              {dede:field.content/}
+            </div>
+          </div>
+      </div> 
+     </div> 
+     <!-- content --> 
+	{dede:include filename="index_left.htm"/} 
+    </div> 
+   </div> 
+   <!-- //contents --> 
+  {dede:include filename="footer.htm"/} 
+  </div> 
+  <!-- JavaScript --> 
+  <script src="{dede:global.cfg_skin/}/js/jquery-1.10.2.min.js"></script> 
+  <script src="{dede:global.cfg_skin/}/js/common.js"></script> 
+  <script type="text/javascript">
+	<!--
+	$(document).ready(function(){
+		$(".pagination a").click(function(){
+			
+		});
+	});
+	//-->
+  </script>
+ </body>
+</html>

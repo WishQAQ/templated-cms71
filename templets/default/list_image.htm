@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if IE 6]><html lang="zh" class="old-ie ie6"><![endif]-->
+<!--[if IE 7]><html lang="zh" class="old-ie ie7"><![endif]-->
+<!--[if IE 8]><html lang="zh" class="old-ie ie8"><![endif]-->
+<!--[if IE 9]><html lang="zh" class="old-ie ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="zh" class="no-js">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>{dede:field.typename/}-{dede:global.cfg_webname/}</title> 
+  <link rel="shortcut icon" href="{dede:global.cfg_cmsurl/}/favicon.ico" /> 
+  <link href="{dede:global.cfg_skin/}/css/style.css" rel="stylesheet" /> 
+ </head> 
+ <body> 
+  <div class="container prcenter-0102"> 
+   <!-- header --> {dede:include filename="head.htm"/} 
+   <!-- banner --> 
+   <div class="banner banner-05">
+    <div class="wrap clearfix">
+     <h2>新的挑战！<strong>VISION 2016！</strong></h2>
+    </div>
+   </div> 
+   <!-- bread --> 
+   <div id="breadcrumb"> 
+    <div class="wrap clearfix"> 
+     <ul class="bread clearfix">
+      {dede:field name='position'/}
+     </ul> 
+     <ul class="social">
+      {dede:field.typename/}
+     </ul> 
+    </div> 
+   </div> 
+   <!-- contents --> 
+   <div class="contents"> 
+    <div class="wrap clearfix"> 
+     <!-- content --> 
+     <div id="content"> 
+      <div class="content"> 
+       <div class="top-module"> 
+        <div class="hedding clearfix"> 
+         <h3 class="hedding-type-01">照片长廊</h3> 
+         <h6 class="hedding-type-02">照片里有我们丰富多彩的身影和样子.</h6> 
+        </div> 
+       </div> 
+       <div class="bot-module"> 
+        <div class="gallery-wrap mobile-hidden"> 
+         <div class="gall-frame"> 
+          <div class="title" id="gall_title"></div> 
+          <div class="img" id="big_img"><img /></div> 
+         </div> 
+        </div> 
+        <div class="thumb-list"> 
+         <ul class="clearfix"> 
+          {dede:list pagesize='5'}
+          <li><p class="mobile-visible">[field:title/]</p><a href="javascript:;" class="btn-zoom"><img src="[field:picname/]" alt="[field:title/]" /></a></li> 
+          {/dede:list}
+         </ul> 
+        </div> 
+        <div class="paging-box"> 
+         <ul> 
+          {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+         </ul> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- content --> 
+     {dede:include filename="index_left.htm"/}  
+    </div> 
+   </div> 
+   <!-- //contents --> 
+   {dede:include filename="footer.htm"/}  
+  </div> 
+  <!-- JavaScript --> 
+  <script type="text/javascript" src="{dede:global.cfg_skin/}/js/jquery-1.10.2.min.js"></script> 
+  <script type="text/javascript" src="{dede:global.cfg_skin/}/js/common.js"></script> 
+  <script type="text/javascript">
+	$(document).ready(function() {
+		$('.btn-zoom').click(function(e){
+			e.preventDefault();
+			var selectedImg = $(this).children('img').clone();
+			var selectedTitle = $(this).siblings('p').text();
+			var frame = $('#big_img');
+			var title = $('#gall_title');
+			frame.html(selectedImg);
+			title.text(selectedTitle);
+		});
+		var fsrc = $(".thumb-list ul li:first .btn-zoom img").attr("src");
+			falt = $(".thumb-list ul li:first .btn-zoom img").attr("alt");
+		$(".gall-frame .title").html(falt);
+		$(".gall-frame .img img").attr("src",fsrc);
+	});//ready
+  </script>   
+ </body>
+</html>
